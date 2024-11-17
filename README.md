@@ -23,3 +23,8 @@ A Django-based platform for managing and retrieving currency exchange rates. Thi
 - **Integrated Conversion**: Directly convert amounts within the Django Admin interface.
 ##
 
+## Prerequisites
+- Python 3.11 or higher
+- Django 4.x
+- CurrencyBeacon API Key (or similar provider API key)
+##
