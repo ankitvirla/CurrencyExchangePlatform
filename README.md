@@ -21,4 +21,5 @@ A Django-based platform for managing and retrieving currency exchange rates. Thi
 ### 5. Admin Interface
 - **User-Friendly Panel**: Manage currencies and providers through a simplified admin interface.
 - **Integrated Conversion**: Directly convert amounts within the Django Admin interface.
+##
 
