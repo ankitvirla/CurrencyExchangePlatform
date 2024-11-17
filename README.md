@@ -1,6 +1,6 @@
 A Django-based platform for managing and retrieving currency exchange rates. This project allows users to fetch and store currency rates dynamically, convert amounts between currencies, and manage currencies and providers with a robust fallback mechanism. The project integrates external providers like CurrencyBeacon to fetch live exchange rates while maintaining flexibility to add other providers in the future.
 
-##Features
+## Features
 ### 1. Currency Rates List API
 - **Retrieve Exchange Rates**: Fetch exchange rates for a specific time period from the database or external providers.
 - **Fallback Mechanism**: Automatically fallback to active providers in priority order if data is unavailable in the database.
