@@ -15,8 +15,7 @@ class BaseProvider:
 
 class CurrencyBeaconProvider:
     def __init__(self):
-        self.api_key = "gZ7vDuU6IQfAmn0pwQvBXpiDfsIimyIh"
-        #self.api_key = os.environ.get('currencybeacon_key')
+        self.api_key = os.environ.get('currencybeacon_key')
         self.base_url = "https://api.currencybeacon.com/v1"
 
     def get_exchange_rate_data(self, source_currency, start_date, end_date):
