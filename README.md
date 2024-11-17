@@ -34,6 +34,41 @@ A Django-based platform for managing and retrieving currency exchange rates. Thi
 ### 1. Clone the Repository
 ```bash
 git clone <repository-url>
-cd currency-exchange ```
+cd currency-exchange
+```
 
-### 2. Create a Virtual Environmenty
+### 2. Create a Virtual Environment
+```bash
+python3.11 -m venv env
+source env/bin/activate
+```
+
+### 3. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Set Up Environment Variables
+```bash
+currencybeacon_key=<your_currency_beacon_api_key>
+```
+
+### 5. Apply Database Migrations
+```bash
+python manage.py makemigrations
+python manage.py migrate
+```
+
+### 6. Create a Superuser
+```bash
+python manage.py createsuperuser
+```
+
+### 7. Run the Development Server
+```bash
+python manage.py runserver
+```
+Access the platform at http://127.0.0.1:8000/.
+
+##
+
