@@ -28,3 +28,12 @@ A Django-based platform for managing and retrieving currency exchange rates. Thi
 - Django 4.x
 - CurrencyBeacon API Key (or similar provider API key)
 ##
+
+## Setup Instructions
+
+### 1. Clone the Repository
+```bash
+git clone <repository-url>
+cd currency-exchange ```
+
+### 2. Create a Virtual Environmenty
