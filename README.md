@@ -68,7 +68,75 @@ python manage.py createsuperuser
 ```bash
 python manage.py runserver
 ```
-Access the platform at http://127.0.0.1:8000/.
+Access the platform at http://127.0.0.1:8000/
 
 ##
+
+## API Endpoints
+
+### 1. Currency Rates List
+Endpoint: /api/currency-rates/
+Method: GET
+Parameters: 
+- source_currency (e.g., USD)
+- date_from (YYYY-MM-DD)
+- date_to (YYYY-MM-DD)
+
+Example Request:
+```bash
+GET http://127.0.0.1:8000/api/currency-rates/?source_currency=USD&date_from=2023-01-01&date_to=2023-01-31
+```
+
+Example Response:
+```bash
+{
+    "source_currency": "USD",
+    "date_range": {
+        "from": "2024-11-01",
+        "to": "2024-11-10"
+    },
+    "rates": {
+        "2024-11-01": {
+            "EUR": 0.919143,
+            "GBP": 0.773581,
+            "INR": 84.110776,
+            "JPY": 153.019481
+        },
+    ...}
+}
+
+```
+### 2. Convert Amount
+Endpoint: /currency-amount/
+Method: GET
+Parameters:
+- source_currency
+- exchanged_currency
+- amount
+
+Example Request:
+```bash
+GET http://127.0.0.1:8000/convert/?source_currency=USD&exchanged_currency=EUR&amount=100
+```
+
+Example Response:
+```bash
+{
+    "converted_amount": 84.47
+}
+```
+### 3. Currency CRUD
+Endpoint: /api/currencies/
+Method: GET, POST, PUT, DELETE
+
+Example Request:
+```bash
+POST http://127.0.0.1:8000/api/currencies/
+Content-Type: application/json
+
+{"code": "MYR", "name": "Malaysian ringgi", "symbol": "Ringgit"}
+
+```
+##
+
 
