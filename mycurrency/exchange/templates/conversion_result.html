@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Conversion Results</title>
+</head>
+<body>
+    <h1>Conversion Results</h1>
+    <p>Converted {{ amount }} {{ source_currency }} to:</p>
+    <ul>
+        {% for target_currency, converted_amount in conversion_results.items %}
+            <li>{{ target_currency }}: {{ converted_amount }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'convert_currency' %}">Back to Converter</a>
+</body>
+</html>

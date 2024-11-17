@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "bcbc6870-ca4a-4b10-81e1-8c00678f4c61",
+		"name": "CurrencyExchangePlatform",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "23148174"
+	},
+	"item": [
+		{
+			"name": "currency-rates",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/currency-rates/?source_currency=USD&date_from=2024-11-01&date_to=2024-11-10",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"currency-rates",
+						""
+					],
+					"query": [
+						{
+							"key": "source_currency",
+							"value": "USD"
+						},
+						{
+							"key": "date_from",
+							"value": "2024-11-01"
+						},
+						{
+							"key": "date_to",
+							"value": "2024-11-10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "convert-amount",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/currency-amount/?source_currency=USD&amount=1&exchanged_currency=INR",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"currency-amount",
+						""
+					],
+					"query": [
+						{
+							"key": "source_currency",
+							"value": "USD"
+						},
+						{
+							"key": "amount",
+							"value": "1"
+						},
+						{
+							"key": "exchanged_currency",
+							"value": "INR"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list all currencies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/currencies/"
+			},
+			"response": []
+		},
+		{
+			"name": "retrieve a specifis currency",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/currencies/165/"
+			},
+			"response": []
+		},
+		{
+			"name": "delete a currency",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/currencies/165"
+			},
+			"response": []
+		},
+		{
+			"name": "update a currency",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"code\": \"USD\", \"name\": \"United States Dollar\", \"symbol\": \"$\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/currencies/165/"
+			},
+			"response": []
+		},
+		{
+			"name": "create a currency",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"code\": \"MYR\", \"name\": \"Malaysian ringgi\", \"symbol\": \"Ringgit\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/currencies/"
+			},
+			"response": []
+		}
+	]
+}
