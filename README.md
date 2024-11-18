@@ -212,6 +212,13 @@ python manage.py shell
 >>> CurrencyRate.objects.all()
 ```
 ##
+## Postman Collection
+A Postman collection is included in the repository to help you quickly test all the available API endpoints
+- File Name: postman_collection.json
+- Purpose: The collection provides pre-configured requests
+
+##
+
 ## Future Improvements
 - Asynchronous Data Loading: Use Celery and Redis to load historical data in bulk.
 - Enhanced Caching: Implement Redis or Django’s caching framework for faster responses.
