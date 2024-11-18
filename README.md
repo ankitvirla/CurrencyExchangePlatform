@@ -38,7 +38,7 @@ A Django-based platform for managing and retrieving currency exchange rates. Thi
 
 ### 1. Clone the Repository
 ```bash
-git clone <repository-url>
+git clone https://github.com/ankitvirla/CurrencyExchangePlatform.git
 cd currency-exchange
 ```
 
@@ -166,7 +166,7 @@ python manage.py load_historic_data --source_currency=USD --target_currency=EUR 
 ##
 
 ## Convert View
-Access the Django Admin at http://localhost:8000/convert/
+Access the Convert View at http://localhost:8000/convert/
 
 ### Convert Amount Section
 - Navigate to the Currency Rates section
